@@ -4,17 +4,21 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.UUID;
+
 @Entity
-@Table (name = "users")
+@Table(name = "users")
 @NoArgsConstructor
 @Data
 public class UserEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String username;
+    @Column(updatable = false, nullable = false)
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private UUID id;
+
+    @Column(name = "nome")
+    private String nome;
     private String email;
-    private String firstName;
-    private String lastName;
-    private String address;
+    private int eta;
+    private String indirizzo;
 }

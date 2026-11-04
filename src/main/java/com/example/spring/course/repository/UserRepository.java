@@ -7,13 +7,15 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
-public interface UserRepository extends JpaRepository<UserEntity, Long> {
-    Optional<UserEntity> findByEmail(String email);
+public interface UserRepository extends JpaRepository<UserEntity, UUID> {
+    Optional<UserEntity> findByNome(String nome);
 
-    @Query ("SELECT u FROM UserEntity u WHERE u.firstName = :firstName")
-    List<UserEntity> searchByName(@Param("firstName") String firstName);
+    @Query ("SELECT u FROM UserEntity u WHERE u.email = :email")
+    List<UserEntity> findByEmail(@Param("email") String email);
 
-    @Query (value = "SELECT * FROM users WHERE email = :email", nativeQuery = true)
-    List<UserEntity> searchByEmail(@Param("email") String email);
+    //Opzione non consiglita
+//    @Query (value = "SELECT * FROM users AS u WHERE u.nome = :nome", nativeQuery = true)
+//    List<UserEntity> findByName(@Param("nome") String nome);
 }
