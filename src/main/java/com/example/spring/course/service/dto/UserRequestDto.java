@@ -2,11 +2,9 @@ package com.example.spring.course.service.dto;
 
 import lombok.Data;
 
-import java.util.UUID;
-
 @Data
 public class UserRequestDto {
-    private UUID id;
+    private Long id;
     private String nome;
     private String email;
     private int eta;
