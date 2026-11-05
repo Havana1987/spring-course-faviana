@@ -1,5 +1,8 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Run" type="Application" factoryName="Application">
+  <configuration default="false" name="Run DEV" type="Application" factoryName="Application">
+    <option name="envFilePaths">
+      <option value="$PROJECT_DIR$/config-env/dev.env" />
+    </option>
     <option name="MAIN_CLASS_NAME" value="com.example.spring.course.SpringCourseFavianaApplication" />
     <module name="spring-course-faviana" />
     <method v="2">
