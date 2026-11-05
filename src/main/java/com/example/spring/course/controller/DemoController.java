@@ -98,16 +98,16 @@ public class DemoController {
     }
 
     @PostMapping("/users")
-    public ResponseEntity<UserResponse> createUser(@Valid @RequestBody UserRequest user) {
+    public UserResponse createUser(@Valid @RequestBody UserRequest user) {
 
         log.info("Ricevuta richiesta per creare un nuovo utente con email: {}", user.getEmail());
 
         UserRequestDto requestDto = mapperUserDto.toRequestDto(user);
 
-        UserResponseDto responseDto = demoService.createUser(requestDto);
+        UserResponse responseDto = demoService.createUser(requestDto);
 
-        UserResponse webResponse = mapperUserDto.toResponse(responseDto);
+        UserResponse webResponse = responseDto;
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(webResponse);
+        return responseDto;
     }
 }

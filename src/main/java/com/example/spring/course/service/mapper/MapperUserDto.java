@@ -2,6 +2,7 @@ package com.example.spring.course.service.mapper;
 
 import com.example.spring.course.model.UserRequest;
 import com.example.spring.course.model.UserResponse;
+import com.example.spring.course.repository.model.UserEntity;
 import com.example.spring.course.service.dto.UserRequestDto;
 import com.example.spring.course.service.dto.UserResponseDto;
 import org.mapstruct.Mapper;
@@ -16,7 +17,7 @@ public abstract class MapperUserDto {
     public abstract UserRequestDto toRequestDto(UserRequest userRequest);
 
     @Mapping(source = "message", target = "messaggio")
-    @Mapping(source = "id", target = "idGenerato")
+    @Mapping(source = "id", target = "id")
     public abstract UserResponse toResponse(UserResponseDto userResponseDto);
 
     public String mapIndirizzo(String citta, String nazione) {

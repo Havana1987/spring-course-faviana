@@ -1,6 +1,7 @@
 package com.example.spring.course.service;
 
 import com.example.spring.course.exceptions.AppException;
+import com.example.spring.course.model.UserResponse;
 import com.example.spring.course.repository.model.UserEntity;
 import com.example.spring.course.repository.UserRepository;
 import com.example.spring.course.service.dto.UserRequestDto;
@@ -20,9 +21,9 @@ public class DemoService {
 
     private final UserRepository userRepository;
 
-    public UserResponseDto createUser(UserRequestDto userRequestDto) {
+    public UserResponse createUser(UserRequestDto userRequestDto) {
         log.debug("Inizio elaborazione per l'utente: {}", userRequestDto.getNome());
-        try {
+//        try {
             UserEntity user = new UserEntity();
 
             user.setNome(userRequestDto.getNome());
@@ -30,18 +31,18 @@ public class DemoService {
             user.setEta(userRequestDto.getEta());
             user.setIndirizzo(userRequestDto.getIndirizzo());
 
-            userRepository.save(user);
+            UserEntity savedUser = userRepository.saveAndFlush(user);
 
-            return new UserResponseDto(
+            return new UserResponse(
                     "Utente salvato con successo",
-                    user.getId().toString()
+                    savedUser.getId()
             );
-        } catch (Exception e) {
-            return new UserResponseDto(
-                    "Errore durante il salvataggio: " + e.getMessage(),
-                    null
-            );
-        }
+//        } catch (Exception e) {
+//            return new UserResponse(
+//                    "Errore durante il salvataggio: " + e.getMessage(),
+//                    null
+//            );
+//        }
     }
 
     public boolean deleteUser(UUID id) {
