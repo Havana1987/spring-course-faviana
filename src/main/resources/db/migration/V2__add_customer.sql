@@ -1,6 +1,1 @@
-CREATE TABLE customers
-(
-    id   BIGSERIAL PRIMARY KEY,
-    name VARCHAR(100)
-        NOT NULL
-);
+ALTER TABLE customers ADD email varchar(150);

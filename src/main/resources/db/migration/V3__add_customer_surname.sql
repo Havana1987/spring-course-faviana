@@ -1,1 +1,1 @@
-ALTER TABLE customers ADD email varchar(150);
+ALTER TABLE customers ADD surname varchar(150);
