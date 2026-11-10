@@ -1,3 +1,4 @@
+
 databaseChangeLog:
   - changeSet:
       id: 001
@@ -7,14 +8,16 @@ databaseChangeLog:
             tableName: customer
             columns:
               - column:
-                name: id
-                type: BIGINT
-                autoIncrement: true
-                constraints:
-                  primaryKey: true
-                  nullable: false
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+
+
               - column:
-                name: name
-                type: VARCHAR(100
-                constraints:
-                  nullable: false
+                  name: name
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: false

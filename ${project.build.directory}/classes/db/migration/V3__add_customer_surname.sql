@@ -1,1 +1,0 @@
-ALTER TABLE customers ADD surname varchar(150);

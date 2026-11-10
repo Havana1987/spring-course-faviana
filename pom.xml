@@ -165,7 +165,7 @@
 								<useBeanValidation>true</useBeanValidation>
 								<useTags>true</useTags>
 								<useResponseEntity>true</useResponseEntity>
-								<openApiNullable>false</openApiNullable>>
+								<openApiNullable>false</openApiNullable>
 							</configOptions>
 						</configuration>
 					</execution>
