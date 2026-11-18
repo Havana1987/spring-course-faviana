@@ -1,8 +1,7 @@
 package com.example.spring.course.service.mapper;
 
-import com.example.spring.course.model.UserRequest;
-import com.example.spring.course.model.UserResponse;
-import com.example.spring.course.repository.model.UserEntity;
+import com.example.spring.course.model.request.UserRequest;
+import com.example.spring.course.model.response.UserResponse;
 import com.example.spring.course.service.dto.UserRequestDto;
 import com.example.spring.course.service.dto.UserResponseDto;
 import org.mapstruct.Mapper;

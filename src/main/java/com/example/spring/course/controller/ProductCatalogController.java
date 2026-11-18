@@ -1,7 +1,7 @@
 package com.example.spring.course.controller;
 
-import com.example.spring.course.model.ProductRequest;
-import com.example.spring.course.model.ProductResponse;
+import com.example.spring.course.model.request.ProductRequest;
+import com.example.spring.course.model.response.ProductResponse;
 import com.example.spring.course.service.ProductService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -21,7 +21,7 @@ public class ProductCatalogController {
     }
 
 
-    @PostMapping
+    @PostMapping("/admin/create")
     @ResponseStatus(HttpStatus.CREATED)
     public ProductResponse create(@Valid @RequestBody ProductRequest request) {
 
@@ -30,19 +30,19 @@ public class ProductCatalogController {
     }
 
 
-    @GetMapping
+    @GetMapping("/public/all")
     public List<ProductResponse> findAll() {
         return service.findAll();
     }
 
 
-    @GetMapping("/{id}")
+    @GetMapping("/user/{id}")
     public ProductResponse findById(@PathVariable String id) {
         return service.findById(id);
     }
 
 
-    @PutMapping("/{id}")
+    @PutMapping("/admin/update/{id}")
     public ProductResponse update(
             @PathVariable String id,
             @Valid @RequestBody ProductRequest request) {
@@ -52,14 +52,14 @@ public class ProductCatalogController {
     }
 
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/admin/delete/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void delete(@PathVariable String id) {
         service.delete(id);
     }
 
 
-    @GetMapping("/category/{category}")
+    @GetMapping("/user/category/{category}")
     public List<ProductResponse> findByCategory(@PathVariable String category) {
 
 
@@ -67,7 +67,7 @@ public class ProductCatalogController {
     }
 
 
-    @GetMapping("/search")
+    @GetMapping("/user/search")
     public List<ProductResponse> searchByName(
             @RequestParam String name) {
 

@@ -1,7 +1,7 @@
 package com.example.spring.course.service;
 
-import com.example.spring.course.model.ProductRequest;
-import com.example.spring.course.model.ProductResponse;
+import com.example.spring.course.model.request.ProductRequest;
+import com.example.spring.course.model.response.ProductResponse;
 import com.example.spring.course.repository.ProductMongoRepository;
 import com.example.spring.course.repository.model.ProductDocument;
 import com.example.spring.course.service.mapper.ProductMongoMapper;

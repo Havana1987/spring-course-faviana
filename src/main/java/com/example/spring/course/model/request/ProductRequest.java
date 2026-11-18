@@ -1,4 +1,4 @@
-package com.example.spring.course.model;
+package com.example.spring.course.model.request;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;

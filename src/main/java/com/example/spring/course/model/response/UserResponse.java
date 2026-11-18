@@ -1,11 +1,9 @@
-package com.example.spring.course.model;
+package com.example.spring.course.model.response;
 
 import com.example.spring.course.service.dto.UserRequestDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.UUID;
 
 @Data
 @NoArgsConstructor

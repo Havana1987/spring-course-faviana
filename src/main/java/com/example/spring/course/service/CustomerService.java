@@ -1,7 +1,7 @@
 package com.example.spring.course.service;
 
 import com.example.spring.course.exceptions.AppException;
-import com.example.spring.course.model.CustomerResponse;
+import com.example.spring.course.model.response.CustomerResponse;
 import com.example.spring.course.repository.CustomerRepository;
 import com.example.spring.course.repository.model.CustomerEntity;
 import com.example.spring.course.service.dto.CustomerDto;

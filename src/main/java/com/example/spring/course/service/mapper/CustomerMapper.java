@@ -1,7 +1,7 @@
 package com.example.spring.course.service.mapper;
 
-import com.example.spring.course.model.CustomerResponse;
-import com.example.spring.course.model.OrderResponse;
+import com.example.spring.course.model.response.CustomerResponse;
+import com.example.spring.course.model.response.OrderResponse;
 import com.example.spring.course.repository.model.CustomerEntity;
 import com.example.spring.course.service.dto.CustomerDto;
 import com.example.spring.course.service.dto.OrderDto;

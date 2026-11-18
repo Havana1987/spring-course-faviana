@@ -1,9 +1,7 @@
-package com.example.spring.course.model;
+package com.example.spring.course.model.response;
 
-import com.example.spring.course.service.dto.OrderDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 import java.util.List;
 

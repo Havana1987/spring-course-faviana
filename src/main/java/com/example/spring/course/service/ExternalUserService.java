@@ -1,7 +1,7 @@
 package com.example.spring.course.service;
 
 import com.example.spring.course.client.ExternalUserClient;
-import com.example.spring.course.model.ExternalUserResponse;
+import com.example.spring.course.model.response.ExternalUserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

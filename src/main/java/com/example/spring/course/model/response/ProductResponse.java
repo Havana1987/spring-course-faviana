@@ -1,4 +1,4 @@
-package com.example.spring.course.model;
+package com.example.spring.course.model.response;
 
 import java.math.BigDecimal;
 import java.time.Instant;

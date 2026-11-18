@@ -1,17 +1,14 @@
 package com.example.spring.course;
 
-import com.example.spring.course.model.ProductRequest;
+import com.example.spring.course.model.request.ProductRequest;
 import com.example.spring.course.repository.ProductMongoRepository;
 import com.example.spring.course.repository.model.ProductDocument;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.resttestclient.TestRestTemplate;
-import org.springframework.boot.resttestclient.autoconfigure.AutoConfigureTestRestTemplate;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
-import org.testcontainers.junit.jupiter.Testcontainers;
 
 import java.math.BigDecimal;
 import java.util.Map;

@@ -1,6 +1,6 @@
 package com.example.spring.course;
 
-import com.example.spring.course.model.UserResponse;
+import com.example.spring.course.model.response.UserResponse;
 import com.example.spring.course.repository.UserRepository;
 import com.example.spring.course.repository.model.UserEntity;
 import com.example.spring.course.service.DemoService;
@@ -11,12 +11,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import java.util.List;
-import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)

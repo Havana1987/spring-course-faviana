@@ -1,7 +1,7 @@
 package com.example.spring.course.controller;
 
-import com.example.spring.course.model.UserRequest;
-import com.example.spring.course.model.UserResponse;
+import com.example.spring.course.model.request.UserRequest;
+import com.example.spring.course.model.response.UserResponse;
 import com.example.spring.course.service.DemoService;
 import com.example.spring.course.service.dto.UserRequestDto;
 import com.example.spring.course.service.dto.UserResponseDto;

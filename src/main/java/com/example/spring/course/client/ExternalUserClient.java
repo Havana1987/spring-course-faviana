@@ -1,7 +1,7 @@
 package com.example.spring.course.client;
 
 import com.example.spring.course.exceptions.AppException;
-import com.example.spring.course.model.ExternalUserResponse;
+import com.example.spring.course.model.response.ExternalUserResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
