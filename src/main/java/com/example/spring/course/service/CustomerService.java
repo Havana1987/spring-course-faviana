@@ -7,6 +7,7 @@ import com.example.spring.course.repository.model.CustomerEntity;
 import com.example.spring.course.service.dto.CustomerDto;
 import com.example.spring.course.service.mapper.CustomerMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -18,6 +19,7 @@ public class CustomerService {
     private final CustomerRepository customerRepository;
     private final CustomerMapper mapper;
 
+    @Cacheable(value = "customers", key = "#id")
     @Transactional(readOnly = true)
     public CustomerResponse findById(Long id) {
         CustomerEntity customerEntity = customerRepository.findById(id).orElseThrow(() -> new AppException("Customer: '" + id + "' not found", HttpStatus.NOT_FOUND));
