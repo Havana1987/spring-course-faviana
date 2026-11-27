@@ -2,13 +2,9 @@ package com.example.spring.course.service;
 
 import com.example.spring.course.exceptions.AppException;
 import com.example.spring.course.model.request.OrderRequest;
-import com.example.spring.course.model.request.ProductRequest;
 import com.example.spring.course.model.response.OrderResponse;
-import com.example.spring.course.model.response.ProductResponse;
 import com.example.spring.course.repository.OrderRepository;
-import com.example.spring.course.repository.model.CustomerEntity;
 import com.example.spring.course.repository.model.OrderEntity;
-import com.example.spring.course.repository.model.ProductDocument;
 import com.example.spring.course.service.mapper.OrderMapper;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

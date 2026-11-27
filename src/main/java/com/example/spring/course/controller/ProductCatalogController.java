@@ -1,8 +1,8 @@
 package com.example.spring.course.controller;
 
-import com.example.spring.course.model.request.ProductRequest;
-import com.example.spring.course.model.response.ProductResponse;
-import com.example.spring.course.service.ProductService;
+import com.example.spring.course.model.request.ProductMongoRequest;
+import com.example.spring.course.model.response.ProductMongoResponse;
+import com.example.spring.course.service.ProductCatalogService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,17 +13,17 @@ import java.util.List;
 @RequestMapping("/api/catalog/products")
 public class ProductCatalogController {
 
-    private final ProductService service;
+    private final ProductCatalogService service;
 
 
-    public ProductCatalogController(ProductService service) {
+    public ProductCatalogController(ProductCatalogService service) {
         this.service = service;
     }
 
 
     @PostMapping("/admin/create")
     @ResponseStatus(HttpStatus.CREATED)
-    public ProductResponse create(@Valid @RequestBody ProductRequest request) {
+    public ProductMongoResponse create(@Valid @RequestBody ProductMongoRequest request) {
 
 
         return service.create(request);
@@ -31,21 +31,21 @@ public class ProductCatalogController {
 
 
     @GetMapping("/public/all")
-    public List<ProductResponse> findAll() {
+    public List<ProductMongoResponse> findAll() {
         return service.findAll();
     }
 
 
     @GetMapping("/user/{id}")
-    public ProductResponse findById(@PathVariable String id) {
+    public ProductMongoResponse findById(@PathVariable String id) {
         return service.findById(id);
     }
 
 
     @PutMapping("/admin/update/{id}")
-    public ProductResponse update(
+    public ProductMongoResponse update(
             @PathVariable String id,
-            @Valid @RequestBody ProductRequest request) {
+            @Valid @RequestBody ProductMongoRequest request) {
 
 
         return service.update(id, request);
@@ -60,7 +60,7 @@ public class ProductCatalogController {
 
 
     @GetMapping("/user/category/{category}")
-    public List<ProductResponse> findByCategory(@PathVariable String category) {
+    public List<ProductMongoResponse> findByCategory(@PathVariable String category) {
 
 
         return service.findByCategory(category);
@@ -68,7 +68,7 @@ public class ProductCatalogController {
 
 
     @GetMapping("/user/search")
-    public List<ProductResponse> searchByName(
+    public List<ProductMongoResponse> searchByName(
             @RequestParam String name) {
 
 

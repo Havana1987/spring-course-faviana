@@ -1,6 +1,6 @@
 package com.example.spring.course;
 
-import com.example.spring.course.model.request.ProductRequest;
+import com.example.spring.course.model.request.ProductMongoRequest;
 import com.example.spring.course.repository.ProductMongoRepository;
 import com.example.spring.course.repository.model.ProductDocument;
 import org.junit.jupiter.api.BeforeEach;
@@ -33,7 +33,7 @@ public class ProductCatalogIntegrationTest extends AbstractIntegrationTest {
 
     @Test
     void testCreateProduct() {
-        ProductRequest request = new ProductRequest("Lenovo ThinkPad",
+        ProductMongoRequest request = new ProductMongoRequest("Lenovo ThinkPad",
                 "Notebook professionale",
                 new BigDecimal("1299.99"),
                 "NOTEBOOK",
